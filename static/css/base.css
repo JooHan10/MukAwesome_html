@@ -1,0 +1,261 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(143, 205, 222, 1);
+}
+
+.nav_bar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 30px;
+    background-color: rgba(230, 184, 35, 1);
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 3px;
+}
+
+.logo > a> img {
+
+    width: 400px;
+    height: 300px;
+    margin: 100px 0px 0px 0px;
+
+
+}
+
+.sign_box {
+    display: flex;
+    align-items: center;
+    width: 170px;
+}
+
+.sign_ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.sign_ul a {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.wrap {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 100px auto;
+    width: 500px;
+    height: 550px;
+    background-color: rgba(230, 184, 35, 1);
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 3px;
+    border-radius: 15px;
+    padding-top: 10px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.form {
+    font-size: 23px;
+    font-weight: bold;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    height: 88%;
+    padding: 10px;
+}
+
+.inputs {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.form input {
+    width: 100%;
+    height: 50px;
+    outline: 0px;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgba(143, 205, 222, 1);
+    border: 2px solid rgba(230, 184, 35, 1);
+    border-radius: 10px;
+    padding-left: 15px;
+    box-shadow: rgb(0 0 0 / 3%) 0px 0px 6px 3px;
+}
+
+.button_box {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.button_box>button {
+    width: 200px;
+    height: 50px;
+    border: 2px solid rgba(230, 184, 35, 1);
+    border-radius: 10px;
+    font-size: 23px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button_box>button:hover {
+    cursor: pointer;
+    background-color: rgba(143, 205, 222, 1);
+}
+
+.button_box>a {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.button_box>a:hover {
+    color: rgba(230, 97, 35, 1);
+}
+
+.alert-danger {
+    font-size: 18px;
+    color: rgba(230, 97, 35, 1);
+}
+
+.col {
+    /*width: 320px;*/
+    height: 300px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    /*background-color: yellow;*/
+    text-align: center;
+    margin-top: 40px;
+}
+
+.content2-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+    /*background: linear-gradient(180deg, #191620, #0c000e);*/
+    background-color: transparent;
+    /*box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);*/
+    /*border-radius: 6px;*/
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.card-img-top {
+    width: 300px;
+    height: 300px;
+    background-color: #FFE8A3;
+    /*margin: 10px auto;*/
+    /*position: absolute;*/
+    /*transform:translate(0%,0%);*/
+
+}
+
+.card-body {
+    width: 100%;
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title {
+    font-family: "Quicksand", sans-serif;
+    color: #F4B742;
+
+    height: 50px;
+    font-size: 2rem;
+    text-align: left;
+    background-color: white;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    display: inline-block;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.card-text {
+
+    height: 250px;
+    background-color: white;
+    color: black;
+
+    font-size: 1.4rem;
+    text-align: left;
+
+    display: inline-block;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+
+    padding: 10px 10px;
+
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.sign_ul{
+ margin: auto 30px auto auto;
+}
+
+/*posting.css*/
+.posting-body {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(143, 205, 222, 1);
+}
+
+.posting-input-group {
+    display: flex;
+    flex-flow: column;
+    margin: auto auto 20px auto;
+    width: 1000px;
+    height: 90%;
+    border-radius: 15px;
+    padding-top: 80px;
+}
+
+.form-floating{
+    padding-top: 5px;
+}

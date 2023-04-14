@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}
+프로필수정
+{% endblock %}
+{% block content %}
+
+<div class='posting-body'>
+
+    <form class="form" method="post" action="/api/profile/update/">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>프로필사진URL</td>
+                {% if user.img %}
+                <td><input type="text" name="img" value="{{ user.img }}"></td>
+                {% else %}
+                <td><input type="text" name="img" value=""></td>
+                {% endif %}
+            </tr>
+            <tr>
+                <td>사용자아이디</td>
+                <td><input type="text" name="username" value="{{ user.username }}"></td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td><input type="email" name="email" value="{{ user.email }}"></td>
+            </tr>
+            <tr>
+                <td>나의한마디</td>
+                <td><input type="text" name="bio" value="{{ user.bio }}"></td>
+            </tr>
+            <tr>
+                <td>TMI</td>
+                <td><input type="text" name="tmi" value="{{ user.tmi }}"></td>
+            </tr>
+            <tr>
+                <td>MBTI</td>
+                <td><input type="text" name="mbti" value="{{ user.mbti }}"></td>
+            </tr>
+            <tr>
+                <td>최애음식</td>
+                <td><input type="text" name="favorite" value="{{ user.favorite }}"></td>
+            </tr>
+        </table>
+        <div style="float: left" class="button_box">
+            <!-- 메시지 위치 수정-->
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li>
+                    <div class="alert alert-{% if message.tags %} class=" {{ message.tags }}"{% endif %} " role="
+                        alert">
+                        {{ message }}
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <button type="submit">수정완료</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
