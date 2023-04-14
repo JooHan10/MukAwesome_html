@@ -85,3 +85,9 @@ def mypage_edit_view(request, pk):
             return render(request, 'posting/edit.html', {'posting_edit': posting_edit})
         else:
             return render(request, 'user/signin.html')
+
+@login_required
+def mypage_delete_view(request, pk):
+    posting_delete = PostingModel.objects.get(id=pk)
+    posting_delete.delete()
+    return redirect('/')

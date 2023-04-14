@@ -5,10 +5,10 @@
 {% endblock %}
 {% block content %}
 
-<div class='posting-body'>
+    <div class='posting-body'>
 
     <form class="form" method="post" action="/api/profile/update/">
-        {% csrf_token %}
+    {% csrf_token %}
         <table>
             <tr>
                 <td>프로필사진URL</td>
@@ -46,19 +46,19 @@
         <div style="float: left" class="button_box">
             <!-- 메시지 위치 수정-->
             {% if messages %}
-            <ul class="messages">
-                {% for message in messages %}
-                <li>
-                    <div class="alert alert-{% if message.tags %} class=" {{ message.tags }}"{% endif %} " role="
-                        alert">
-                        {{ message }}
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li>
+                            <div class="alert alert-{% if message.tags %} class="{{ message.tags }}"{% endif %}
+                            " role="alert">
+                            {{ message }}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
             {% endif %}
             <button type="submit">수정완료</button>
         </div>
     </form>
-</div>
+    </div>
 {% endblock %}
